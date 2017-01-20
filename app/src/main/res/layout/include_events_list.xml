@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/white"
+        android:background="@color/GIPurple"
         android:layout_marginTop="2dp">
 
         <TextView
@@ -40,14 +40,14 @@
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fabAddEvent"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_add_black_24dp"
         app:elevation="5dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        app:backgroundTint="@color/GIYellow"
+        app:backgroundTint="@color/GIPurple"
         android:layout_marginRight="10dp"
         android:layout_marginBottom="10dp"
         />

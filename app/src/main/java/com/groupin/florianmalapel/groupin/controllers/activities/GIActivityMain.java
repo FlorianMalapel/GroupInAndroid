@@ -108,6 +108,7 @@ public class GIActivityMain extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         customPagerAdapter = new CustomPagerAdapter(getSupportFragmentManager());
         viewPagerBottomMenu.setAdapter(customPagerAdapter);
+        bottomNavigation.setDefaultItem(1);
     }
 
     private void initializeViews(){
@@ -131,7 +132,7 @@ public class GIActivityMain extends AppCompatActivity
         viewPagerBottomMenu.addOnPageChangeListener(this);
     }
 
-    private void setTitleToolbar(String title){
+    public void setTitleToolbar(String title){
         toolbar.setTitle(title);
         setSupportActionBar(toolbar);
 
@@ -149,18 +150,22 @@ public class GIActivityMain extends AppCompatActivity
     public void onSelectedItemChanged(int i) {
         if( i == R.id.tab_home ){
             viewPagerBottomMenu.setCurrentItem(0);
+            setTitleToolbar("Accueil");
         }
 
         else if( i == R.id.tab_groups ){
             viewPagerBottomMenu.setCurrentItem(1);
+            setTitleToolbar("Groupes");
         }
 
         else if( i == R.id.tab_events ){
             viewPagerBottomMenu.setCurrentItem(2);
+            setTitleToolbar("Événements");
         }
 
         else if( i == R.id.tab_friends ){
             viewPagerBottomMenu.setCurrentItem(3);
+            setTitleToolbar("Amis");
         }
     }
 
